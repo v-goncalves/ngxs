@@ -7,7 +7,8 @@
     "build": "./node_modules/.bin/ng build",
     "test": "./node_modules/.bin/ng test",
     "lint": "./node_modules/.bin/ng lint",
-    "e2e": "./node_modules/.bin/ng e2e"
+    "e2e": "./node_modules/.bin/ng e2e",
+    "build-github-pages": "./node_modules/.bin/ng build --prod --output-path docs --base-href ngxs && cp docs/index.html docs/404.html"
   },
   "private": true,
   "dependencies": {
