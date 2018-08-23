@@ -1,0 +1,27 @@
+<div>
+  <button mat-raised-button (click)="updateUserNameAsRandom()">New User Name (Random)</button>
+
+  <mat-tab-group style="margin: 20px">
+    <!-- Whole State -->
+    <mat-tab label="Whole store (Observable)">
+      <app-json-view [data]="wholeState$ | async"></app-json-view>
+    </mat-tab>
+    <!-- stateSnapshot -->
+    <mat-tab label="Whole store snapshot (no Observable)">
+      <app-json-view [data]="stateSnapshot">
+        <h1 class="title">snapshot (all store object) [NOT an Observable]</h1>
+      </app-json-view>
+    </mat-tab>
+    <!-- AppConfigs -->
+    <mat-tab label="{{appConfigurationStoreObjectName}} (Observable)">
+      <app-json-view [data]="appConfigurationState$ | async"></app-json-view>
+    </mat-tab>
+    <mat-tab label="userName$ (Observable)">
+      <p>{{(userName$ | async) || '(not defined yet!)'}}</p>
+    </mat-tab>
+    <!-- routerState -->
+    <mat-tab label="router (Observable)">
+      <app-json-view [data]="routerState$ | async"></app-json-view>
+    </mat-tab>
+  </mat-tab-group>
+</div>

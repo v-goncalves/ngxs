@@ -1,0 +1,27 @@
+:host {
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .container {
+    margin: 20px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .hide-mobile {
+      // border: 1px solid red !important;
+      display: none !important;
+    }
+  }
+  @media screen and (min-width: 701px) {
+    .hide-desktop {
+      // border: 1px solid green !important;
+      display: none;
+    }
+  }
+}

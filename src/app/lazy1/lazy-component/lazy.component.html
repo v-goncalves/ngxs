@@ -1,0 +1,11 @@
+<button mat-raised-button (click)="updateLazy1ContentAsRandom()">New "content" for lazy1 (Random)</button>
+
+<!-- lazy1 state -->
+<app-json-view [data]="lazy1State$ | async">
+  <div class="title">"{{lazy1StoreObjectName}}" store (Observable)</div>
+</app-json-view>
+
+<!-- Whole State -->
+<app-json-view [data]="wholeState$ | async">
+  <div class="title">Whole store (Observable)</div>
+</app-json-view>
